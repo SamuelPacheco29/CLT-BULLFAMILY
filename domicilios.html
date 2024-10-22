@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Domicilios - Bull Family</title>
+    <link rel="stylesheet" href="styles/domicilios.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1><a href="index.html">Bull Family</a></h1>
+                <button id="close-sidebar" class="btn-icon" aria-label="Cerrar menú">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="inventario.html"><i class="fas fa-box"></i> Inventario</a></li>
+                    <li><a href="domicilios.html" class="active"><i class="fas fa-truck"></i> Domicilios</a></li>
+                    <li><a href="personalizacion.html"><i class="fas fa-users"></i> Personalizacion</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+                <button id="open-sidebar" class="btn-icon" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2>Gestión de Domicilios</h2>
+                <div class="user-menu">
+                    <button class="btn-icon" aria-label="Notificaciones">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn-user">
+                            Juan Pérez
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="perfilUsuario.html">Perfil</a></li>
+                            <li><a href="#">Configuración</a></li>
+                            <li><a href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="delivery-content">
+                <section class="order-list">
+                    <h3>Pedidos Activos</h3>
+                    <table id="orderTable">
+                        <thead>
+                            <tr>
+                                <th>ID Pedido</th>
+                                <th>Cliente</th>
+                                <th>Dirección</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Los pedidos se cargarán dinámicamente aquí -->
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="scripts/domicilios.js"></script>
+</body>
+</html>

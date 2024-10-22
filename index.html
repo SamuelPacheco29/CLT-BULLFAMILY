@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bull Family</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1><a href="index.html">Bull Family</a></h1>
+                <button id="close-sidebar" class="btn-icon" aria-label="Cerrar menú">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="gestInv.html"><i class="fas fa-box"></i> Inventario</a></li>
+                    <li><a href="domicilios.html"><i class="fas fa-truck"></i> Domicilios</a></li>
+                    <li><a href="personalizacion.html"><i class="fas fa-users"></i> Personalizacion</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+                <button id="open-sidebar" class="btn-icon" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2>Dashboard</h2>
+                <div class="user-menu">
+                    <button class="btn-icon" aria-label="Notificaciones">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn-user">
+                            Juan Pérez
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="perfilUsuario.html">Perfil</a></li>
+                            <li><a href="#">Configuración</a></li>
+                            <li><a href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="dashboard-content">
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Total de Ventas</h3>
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-value">$150,231.89</p>
+                            <p class="card-change positive">+20.1% respecto al mes anterior</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Pedidos Activos</h3>
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-value">573</p>
+                            <p class="card-change positive">+201 desde la última hora</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Productos en Inventario</h3>
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-value">1,234</p>
+                            <p class="card-change positive">+19 nuevos productos esta semana</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Clientes Activos</h3>
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-value">2,350</p>
+                            <p class="card-change positive">+180.1% respecto al mes anterior</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="charts">
+                    <div class="chart-container">
+                        <h3>Ventas Mensuales</h3>
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Pedidos por Día</h3>
+                        <canvas id="ordersChart"></canvas>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <h3>Inventario de Productos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Categoría</th>
+                                <th>Stock</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pizza Margherita</td>
+                                <td>Pizzas</td>
+                                <td>50</td>
+                                <td>$12.99</td>
+                            </tr>
+                            <tr>
+                                <td>Hamburguesa Clásica</td>
+                                <td>Hamburguesas</td>
+                                <td>35</td>
+                                <td>$9.99</td>
+                            </tr>
+                            <tr>
+                                <td>Ensalada César</td>
+                                <td>Ensaladas</td>
+                                <td>20</td>
+                                <td>$8.99</td>
+                            </tr>
+                            <tr>
+                                <td>Pasta Alfredo</td>
+                                <td>Pastas</td>
+                                <td>40</td>
+                                <td>$11.99</td>
+                            </tr>
+                            <tr>
+                                <td>Sushi Variado</td>
+                                <td>Sushi</td>
+                                <td>25</td>
+                                <td>$15.99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
